@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="container">
+    <h2>Employee Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+    <div>
+        <a href="employeerequestform.html">form</a>
+        <a href="employeeviewrequest.html">view</a>
+    </div>
+
+    <h3>Create Travel Request</h3>
+    <form id="requestForm">
+        <div class="form-group">
+            <label for="empid">Emp ID</label>
+            <input type="text" id="empid" required>
+        </div>
+        <div class="form-group">
+            <label for="empname">Emp Name</label>
+            <input type="text" id="empname" required>
+        </div>
+        <div class="form-group">
+            <label for="project">Project</label>
+            <input type="text" id="project" required>
+        </div>
+        <div class="form-group">
+            <label for="cause">Cause</label>
+            <input type="text" id="cause" required>
+        </div>
+        <div class="form-group">
+            <label for="source">Source</label>
+            <input type="text" id="source" required>
+        </div>
+        <div class="form-group">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" required>
+        </div>
+        <div class="form-group">
+            <label for="from-date">From Date</label>
+            <input type="date" id="from-date" required>
+        </div>
+        <div class="form-group">
+            <label for="to-date">To Date</label>
+            <input type="date" id="to-date" required>
+        </div>
+        <div class="form-group">
+            <label for="num-days">Number of Days</label>
+            <select id="num-days" required>
+                <option value="">Select Number of Days</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="priority">Priority</label>
+            <select id="priority" required>
+                <option value="normal">Normal</option>
+                <option value="critical">Critical</option>
+            </select>
+        </div>
+        <button type="submit">Submit Request</button>
+    </form>
+    
+
+</div>
+
+    <script src="../js/app.js"></script>
+</body>
+</html>

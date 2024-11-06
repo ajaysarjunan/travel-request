@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="container">
+    <h2>Employee Dashboard</h2>
+    <button class="logoutbutton" onclick="logout()">Logout</button>
+    <div>
+        <a href="employeerequestform.html">form</a>
+        <a href="employeeviewrequest.html">view</a>
+    </div>
+
+
+    <h3>Travel Requests</h3>
+<label for="filterPriority">Filter by Priority/Status: </label>
+<select id="filterPriority" onchange="displayRequests()">
+    <option value="all">All Requests</option>
+    <option value="critical">Critical Requests</option>
+    <option value="normal">Normal Requests</option>
+    <option value="rejected">Rejected Requests</option>
+</select>
+
+
+
+    
+    <div id="requestsList"></div> <!-- Correct id here -->
+</div>
+    <script src="../js/app.js"></script>
+</body>
+</html>

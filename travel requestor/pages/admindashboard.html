@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="container">
+    <h2>Admin Dashboard</h2>
+    <button onclick="logout()" style="width: 100px;">Logout</button>
+    <h3>All Travel Requests</h3>
+
+    <!-- Filter Dropdown -->
+    <label for="filterStatus">Filter by Status: </label>
+    <select id="filterStatus" onchange="handleFilterChange()">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+        <option value="on hold">On Hold</option>
+    </select>
+
+    <div id="adminRequestsList"></div>
+</div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

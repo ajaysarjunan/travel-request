@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h2 {
+    color: #333;
+}
+form {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+input {
+    padding: 8px;
+    width: 20%;
+    display: block;
+}
+select{
+    padding: 8px;
+    width: 100%;
+}
+a{
+    margin-top: 50px;
+    padding: 8px;
+    width: 50px;
+    background-color: #564caf;
+    color: white;
+    border: none;
+}   
+
+button {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 8px;
+    width: 90px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}

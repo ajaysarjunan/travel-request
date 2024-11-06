@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <div id="container">
+    <h2>Request Details</h2>
+    <div id="requestDetails"></div>
+</div>
+    <script>
+        // Function to fetch and display the request details
+        function displayRequestDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const index = urlParams.get('index');
+            const requests = JSON.parse(localStorage.getItem("requests")) || [];
+
+            if (requests[index]) {
+                const req = requests[index];
+                document.getElementById('requestDetails').innerHTML = `
+                    <p><strong>Employee Name:</strong> ${req.empname}</p>
+                    <p><strong>Employee ID:</strong> ${req.empid}</p>
+                    <p><strong>Destination:</strong> ${req.destination}</p>
+                    <p><strong>Priority:</strong> ${req.priority}</p>
+                    <p><strong>Status:</strong> ${req.status}</p>
+                    <p><strong>Project:</strong> ${req.project}</p>
+                    <p><strong>Cause:</strong> ${req.cause}</p>
+                    <p><strong>Source:</strong> ${req.source}</p>
+                    <p><strong>From Date:</strong> ${req.fromdate}</p>
+                    <p><strong>To Date:</strong> ${req.todate}</p>
+                `;
+            } else {
+                document.getElementById('requestDetails').innerHTML = `<p>No details available for this request.</p>`;
+            }
+        }
+
+        // Call the function to display the request details
+        displayRequestDetails();
+    </script>
+</body>
+</html>
